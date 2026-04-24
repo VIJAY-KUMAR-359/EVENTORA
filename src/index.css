@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+Theme inspired by vibrant event/celebration imagery - deep purples, magentas, and warm pinks
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 97%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    --primary: 217 90% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 93%;
+    --secondary-foreground: 220 15% 25%;
+
+    --muted: 220 10% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 210 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 90%;
+    --ring: 217 90% 50%;
+
+    --radius: 0.75rem;
+
+    --event-gradient: linear-gradient(135deg, hsl(217 90% 50%), hsl(210 80% 55%));
+    --hero-gradient: linear-gradient(180deg, hsl(220 15% 95%) 0%, hsl(220 20% 90%) 50%, hsl(217 50% 85%) 100%);
+
+    --sidebar-background: 0 0% 97%;
+    --sidebar-foreground: 220 15% 15%;
+    --sidebar-primary: 217 90% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 93%;
+    --sidebar-accent-foreground: 220 15% 25%;
+    --sidebar-border: 220 15% 88%;
+    --sidebar-ring: 217 90% 50%;
+  }
+
+  .dark {
+    --background: 225 50% 4%;
+    --foreground: 210 20% 92%;
+
+    --card: 225 45% 8%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 225 45% 8%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 217 90% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 40% 14%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 225 30% 18%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 210 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 225 35% 15%;
+    --input: 225 35% 12%;
+    --ring: 217 90% 50%;
+
+    --sidebar-background: 225 50% 4%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 217 90% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 225 40% 14%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 225 35% 12%;
+    --sidebar-ring: 217 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+  }
+}
+
+body {
+  background-image: url('/images/bg-light.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.dark body {
+  background-image: url('/images/bg-dark.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
